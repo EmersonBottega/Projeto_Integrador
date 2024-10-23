@@ -18,7 +18,7 @@
 Execute o comando abaixo para clonar o repositório em sua máquina local:
 
 ```bash
-git clone https://github.com/usuario/repo.git
+git clone https://github.com/EmersonBottega/Projeto_Integrador.git
 ```
 
 Substitua usuario e repo pelos valores reais.
