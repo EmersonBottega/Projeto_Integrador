@@ -10,6 +10,7 @@
 -  Python
 -  Django, Django restframework
 -  HTML5 & CSS
+-  JavaScript
 -  Venv (Ambiente virtual python)
 
 # Como executar a aplicação:
