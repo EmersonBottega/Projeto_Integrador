@@ -51,7 +51,7 @@ source venv/bin/activate
 Com o ambiente virtual ativado, instale todas as dependências do projeto:
 
 ```bash
-pip install django, djangorestframework
+pip install django, djangorestframework, django-cors-headers
 ```
 
 ## 4. Realize as migrações do banco de dados
