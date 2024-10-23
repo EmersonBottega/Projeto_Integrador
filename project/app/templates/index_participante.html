@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Participante</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style_participante.css' %}">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <ul class="menu">
+                <li class="active">
+                    <a href="{% url 'perfil' %}">
+                        <i class="fas fa-user"></i>
+                        <span>Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Histórico</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-star"></i>
+                        <span>Carteirinha</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Usuário</span>
+                <h2>Aluno</h2>
+            </div>
+                <div class="user--info">
+                    <div class="search--box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="search" placeholder="Pesquise...">
+                </div>
+                <img src="{% static 'assets/img/astronomia.png' %}" alt="">
+            </div>
+        </div>
+<!--Adicionar um botão para saiba mais e o tipo da atividade-->
+        <h1>Atividades</h1>
+        <div class="activities">
+            <div class="activity">
+                <img src="{% static 'assets/img/panela.png' %}" alt="Artesanato">
+                <h2>Artesanato</h2>
+                <p>Aprenda técnicas variadas, desde trabalhos em papel até costura e criação de peças decorativas. Ideal para iniciantes e entusiastas, este curso oferece um espaço acolhedor para explorar sua imaginação, desenvolver habilidades manuais e criar projetos únicos que você pode levar para casa.</p>
+                <a href="" class="btn">Saiba Mais</a>
+            </div>
+            <div class="activity">
+                <img src="{% static 'assets/img/monitor.png' %}" alt="Informática Básica">
+                <h2>Informática Básica</h2>
+                <p>Ideal para iniciantes, este curso abrange o uso de sistemas operacionais, programas de edição de texto, navegação na internet e segurança online. Aprenda de forma prática e interativa, preparando-se para utilizar a tecnologia no dia a dia e no ambiente profissional com confiança.</p>
+                <a href="" class="btn">Saiba Mais</a>
+            </div>
+            <div class="activity">
+                <img src="{% static 'assets/img/lixo.png' %}" alt="Lixo Eletrônico">
+                <h2>Lixo Eletrônico</h2>
+                <p>Abordaremos os desafios do descarte de dispositivos eletrônicos, suas consequências para a natureza e as melhores práticas para reciclagem. Junte-se a nós para aprender como contribuir para um futuro mais sustentável e consciente em relação ao uso de tecnologia.</p>
+                <a href="" class="btn">Saiba Mais</a>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="{% static 'js/script_participante.js' %}"></script>
+</body>
+</html>

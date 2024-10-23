@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/style_sucess.css' %}">
+    <title>Sucesso</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="{% static 'assets/img/sucesso.png' %}" alt="Sucesso">
+        </div>
+        <div class="form">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Bem-vindo!</h1>
+                    <h2>Você acaba de dar o primeiro passo para novas experiências!</h2>
+                </div>
+            </div>
+
+            <div class="continue-button">
+                <a href="{% url 'participante' %}" class="button">Continuar</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

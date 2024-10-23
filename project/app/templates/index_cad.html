@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/style_cad.css' %}">
+    <title>Formulário de Cadastro</title>
+</head>
+
+<body data-success-url="{% url 'sucesso' %}">
+    <div class="container">
+        <div class="form-image">
+            <img src="{% static 'assets/img/astronomia.png' %}" alt="">
+        </div>
+        <div class="form">
+            <!-- Formulário de cadastro -->
+            <form id="cadastro-form" method="POST">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button type="button" onclick="window.location.href='#'">Entrar</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                    </div>
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="F" type="radio" name="gender" value="F">
+                            <label for="F">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="M" type="radio" name="gender" value="M">
+                            <label for="M">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="O" type="radio" name="gender" value="O">
+                            <label for="O">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="N" type="radio" name="gender" value="N">
+                            <label for="N">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit">Continuar</button>
+                </div>
+                
+                <!-- Campo CSRF obrigatório para Django -->
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            </form>
+        </div>
+    </div>
+    
+    <!-- Importação do JS separado -->
+    <script src="{% static 'js/script_cad.js' %}"></script>
+</body>
+
+</html>

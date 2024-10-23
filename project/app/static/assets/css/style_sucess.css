@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Variáveis CSS */
+:root {
+    --primary-color: #2CABA3;
+    --secondary-color: #6962AD;
+    --background-gradient: linear-gradient(135deg, #2CABA3, #30174D, #C65BCF);
+    --text-color: #333;
+    --header-color: #4a90e2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografia */
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+}
+
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+}
+
+.libre-baskerville-regular-italic {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Estilos do corpo */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-gradient);
+    overflow: hidden;
+}
+
+/* Container Principal */
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    font-size: 2rem;
+}
+
+/* Estilos da Imagem do Formulário */
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 12% 0% 0% 12%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-image img {
+    width: 30rem;
+}
+
+/* Estilos do Formulário */
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+/* Cabeçalho do Formulário */
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header h1 {
+    position: relative;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Título */
+.title {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title h1 {
+    color: var(--secondary-color);
+    font-size: 2.5em;
+}
+
+.title h2 {
+    color: var(--text-color);
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+
+/* Botão de Continuar */
+.continue-button {
+    width: 100%;
+    margin-top: 2.5rem;
+    background-color: var(--secondary-color);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex; /* Alinha o link centralizado */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */
+}
+
+
+.continue-button a {
+    text-decoration: none; 
+    font-size: 0.93rem; 
+    font-weight: 500; 
+    color: #fff; 
+    display: block; 
+    width: 100%;
+    text-align: center; 
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+}

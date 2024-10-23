@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/perfil.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Perfil Participante</title>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-pic">
+                <img src="{% static 'assets/img/astronomia.png' %}" alt="user picture">
+            </div>
+            <div class="profile-details">
+                <div class="intro">
+                    <h2>{{ user.nome }}</h2>
+                    <h4>Participante</h4>
+                </div>
+                <div class="contact-info">
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa fa-phone" style="color: var(--cor);"></i>
+                        </div>
+                        <div class="content">
+                            <span>Celular</span>
+                            <h5>{{ user.telefone|default:"Não informado" }}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa fa-envelope-open" style="color: var(--red);"></i>
+                        </div>
+                        <div class="content">
+                            <span>Email</span>
+                            <h5>{{ user.email|default:"Não informado" }}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa fa-map-marker" style="color: var(--blue);"></i>
+                        </div>
+                        <div class="content">
+                            <span>Cidade</span>
+                            <h5>{{ user.cidade|default:"Não informado" }}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit">
+                    <a href="{% url 'editar_perfil' %}" class="edit-btn">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <a href="{% url 'participante' %}" class="edit-btn">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Big Card - About -->
+        <div class="about">
+            <h1>Sobre mim</h1>
+            <p>{{ user.descricao|default:"Não informado" }}</p>
+            <h2>Meus dados</h2>
+            <div class="info">
+                <div class="infobox">
+                    <div class="desc">
+                        <h3>Data de nascimento</h3>
+                        <p>{{ user.data_nascimento|date:"d/m/Y"|default:"Não informado" }}</p>
+                    </div>
+                </div>
+                <div class="infobox">
+                    <div class="desc">
+                        <h3>CPF</h3>
+                        <p>{{ user.cpf|default:"Não informado" }}</p>
+                    </div>
+                </div>
+                <div class="infobox">
+                    <div class="desc">
+                        <h3>Alergias</h3>
+                        <p>{{ user.alergias|default:"Não informado" }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

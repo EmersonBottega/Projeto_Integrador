@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Home page</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Observatório da Juventude</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre Nós</a></li>
+            <li><a href="#menu">Cursos</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </header>
+
+    <!------Home Start------->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Capacitação para a Nova Geração</h1>
+            <h2>Promovendo Oportunidades para <br> Jovens e Adolescentes</h2>
+            <a href="{% url 'cadastro' %}" class="btn">Cadastre-se</a>
+        </div>
+        <div class="home-img">
+            <img src="{% static 'assets/img/estudantes.png' %}" alt="imagem-home">
+        </div>
+    </section>
+    
+    <!------About Start------->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="{% static 'assets/img/livros.png' %}" alt="imagem-about">
+        </div>
+        <div class="about-text">
+            <span>Sobre Nós</span>
+            <h2>Conectando Jovens a Oportunidades</h2>
+            <p>O Observatório da Juventude é uma iniciativa dedicada a conectar jovens e adolescentes com oportunidades de aprendizado e crescimento. Nossa missão é promover cursos e atividades que capacitem a nova geração.</p>
+            <a href="{% url 'cadastro' %}" class="btn">Venha fazer parte</a>
+        </div>
+    </section>
+
+    <!------Cursos Start------->
+    <section class="menu" id="menu">
+        <div class="heading">
+            <span>Cursos Oferecidos</span>
+            <h2>Aprenda e Cresça Conosco</h2>
+        </div>
+        <div class="menu-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="{% static 'assets/img/panela.png' %}" alt="imagem menu">
+                </div>
+                <h2>Artesanato</h2>
+                <h3>Desenvolva sua criatividade e aprenda a criar peças únicas.</h3>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="{% static 'assets/img/monitor.png' %}" alt="imagem menu">
+                </div>
+                <h2>Informática Básica</h2>
+                <h3>Domine ferramentas digitais essenciais para o mercado de trabalho.</h3>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="{% static 'assets/img/paint.png' %}" alt="imagem menu">
+                </div>
+                <h2>Artes Visuais</h2>
+                <h3>Explore disciplinas que abrangem técnicas de desenho, pintura, escultura, gravura e artes decorativas.</h3>
+            </div>
+        </div>
+    </section>
+
+    <!------Service Start------->
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Serviços</span>
+            <h2>Oferecemos a Melhor Qualidade em Capacitação</h2>
+        </div>
+        <div class="service-container">
+            <div class="s-box">
+                <img src="{% static 'assets/img/qualidade.png' %}" alt="">
+                <h3>Cursos de Qualidade</h3>
+                <p>Nossos cursos são projetados para oferecer as melhores práticas e conhecimentos para jovens.</p>
+            </div>
+            <div class="s-box">
+                <img src="{% static 'assets/img/eventos.png' %}" alt="">
+                <h3>Eventos e Atividades</h3>
+                <p>Participe de eventos que promovem a interação e o aprendizado colaborativo entre os jovens.</p>
+            </div>
+            <div class="s-box">
+                <img src="{% static 'assets/img/mentoria.png' %}" alt="">
+                <h3>Mentoria e Apoio</h3>
+                <p>Oferecemos suporte contínuo aos nossos alunos, ajudando-os a atingir seus objetivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!------Call to action------->
+    <section class="cta">
+        <h2>Capacitando Jovens para <br> um Futuro Melhor</h2>
+        <a href="{% url 'cadastro' %}" class="btn">Cadastre-se</a>
+    </section>
+
+    <!------Footer Start------->
+    <section id="contatos">
+        <div class="footer">
+            <div class="main">
+                <div class="col">
+                    <h4>Menu link</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#menu">Cursos</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#contatos">Contatos</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Nossos Serviços</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Desenvolvimento Web</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Gestão de Produto</a></li>
+                        <li><a href="#">Design Gráfico</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Informações de Entrega</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos e Condições</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Contato</h4>
+                    <div class="social">
+                        <a href="#" class="bx bxl-facebook"></a>
+                        <a href="#" class="bx bxl-instagram"></a>
+                        <a href="#" class="bx bxl-twitter"></a>
+                        <a href="#" class="bx bxl-whatsapp"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--JavaScript-->
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
